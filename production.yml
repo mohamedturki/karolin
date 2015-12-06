@@ -13,15 +13,27 @@ db:
     ports:
         - "5432:5432"
 
+nginx:
+    restart: always
+    build: ./nginx
+    ports:
+        - "80:80"
+    volumes_from:
+        - web
+    links:
+        - web
+
+
 web:
     restart: always
     build: ./web
-    ports:
-        - "8000:8000"
+    expose:
+        - "8000"
     volumes:
-        - ./web:/karolin
+        # Mount the static dirs as a volume for nginx to pick up.
+        - /var/www/karol.in/static/
     links:
         - db:db
     env_file:
         - .env
-    command: ./entrypoint.sh
+    command: ./entrypoint-production.sh
