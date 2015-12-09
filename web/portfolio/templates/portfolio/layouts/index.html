@@ -1,5 +1,9 @@
 {% extends "portfolio/base.html" %}
 
 {% block content %}
-
+    <div class="projects-list">
+        {% for project in projects %}
+            {% include "portfolio/partials/project_item.html" %}
+        {% endfor %}
+    </div>
 {% endblock %}
