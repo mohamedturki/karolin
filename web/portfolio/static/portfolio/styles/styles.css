@@ -26,6 +26,7 @@ body {
 .nav-menu-secondary {
     font-size: 14px;
     background-color: #fafafa;
+    opacity: 0.8;
 }
 
 .nav-menu-item {
@@ -36,8 +37,14 @@ body {
     padding-left: 50px;
 }
 
-.nav-menu-secondary .nav-menu-item:not(:first-child) {
+.nav-menu-secondary:not(.open) .nav-menu-item:not(:first-child) {
     display: none;
+}
+
+.nav-menu-secondary .nav-menu-item {
+    display: block;
+    padding-top: 35px;
+    padding-bottom: 35px;
 }
 
 .nav-menu-url {
