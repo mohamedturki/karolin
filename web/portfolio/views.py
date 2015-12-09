@@ -11,7 +11,9 @@ logger = logging.getLogger(__name__)
 
 def index(request):
     categories = ProjectCategory.objects.all()
-    return render(request, 'portfolio/index.html', {'categories': categories})
+    return render(request, 'portfolio/layouts/index.html', {
+        'categories': categories
+    })
 
 
 def project(request, project_id):

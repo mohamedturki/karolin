@@ -1,0 +1,13 @@
+<nav>
+    <a href="/" class="logo"></a>
+    <ul class="nav-menu nav-menu-primary">
+        <li class="nav-menu-item"><a href="/works" class="nav-menu-url active">Works</a></li>
+        <li class="nav-menu-item"><a href="/aboutme" class="nav-menu-url">About me</a></li>
+    </ul>
+    <ul class="nav-menu nav-menu-secondary">
+        <li class="nav-menu-item"><a href="/" class="nav-menu-url active">recent</a></li>
+        {% for category in categories %}
+            <li class="nav-menu-item"><a href="/category/{{ category.id }}" class="nav-menu-url">{{ category.name }}</a></li>
+        {% endfor %}
+    </ul>
+</nav>
