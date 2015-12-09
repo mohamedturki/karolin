@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
 body {
     padding: 0;
     margin: 0;
@@ -83,6 +85,7 @@ body {
 
 .project-title {
     margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     text-transform: uppercase;
 }

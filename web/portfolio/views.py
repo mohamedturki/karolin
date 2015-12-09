@@ -14,7 +14,7 @@ def index(request):
     projects = Project.objects.filter()[:3]
     return render(request, 'portfolio/layouts/index.html', {
         'categories': categories,
-        'projects': projects,
+        'projects': projects
     })
 
 
