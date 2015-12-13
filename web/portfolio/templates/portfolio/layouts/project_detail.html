@@ -1,0 +1,16 @@
+{% extends "portfolio/base.html" %}
+{% load django_markdown %}
+
+{% block content %}
+    <div class="project-detail-container">
+        <h3 class="project-title">{{ project.title }}</h3>
+        <ul>
+            <li>Role: </li>
+            <li>Task: </li>
+        </ul>
+
+        <div class="project-detail-markdown">
+            {{ project.full_description|markdown }}
+        </div>
+    </div>
+{% endblock %}

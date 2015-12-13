@@ -1,6 +1,6 @@
 import logging
 
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 
 from .models import Project, ProjectCategory
 
@@ -14,6 +14,9 @@ class ProjectList(ListView):
 
 
 class RecentProjectList(ProjectList):
+    queryset = Project.objects.order_by('pub_date')[:4]
 
-    def get_queryset(self, **kwargs):
-        return Project.objects.order_by('pub_date')[:4]
+
+class ProjectDetail(DetailView):
+    model = Project
+    template_name = 'portfolio/layouts/project_detail.html'
