@@ -16,6 +16,7 @@ class ProjectCategory(models.Model):
 class Project(models.Model):
     title = models.CharField(max_length=200)
     url = models.URLField(blank=True)
+    pub_date = models.DateField(auto_now_add=True, null=True)
     short_description = models.TextField(blank=True)
     full_description = MarkdownField()
     category = models.ForeignKey(ProjectCategory, null=True)
