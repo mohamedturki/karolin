@@ -1,8 +1,8 @@
 <nav>
     <a href="/" class="logo"></a>
     <ul class="nav-menu nav-menu-primary">
-        <li class="nav-menu-item"><a href="#" class="nav-menu-url active">Works</a></li>
-        <li class="nav-menu-item"><a href="#" class="nav-menu-url">About me</a></li>
+        <li class="nav-menu-item"><a href="{% url "portfolio:recent" %}" class="nav-menu-url active">Works</a></li>
+        <li class="nav-menu-item"><a href="{% url "portfolio:about" %}" class="nav-menu-url">About me</a></li>
     </ul>
     <ul class="nav-menu nav-menu-secondary">
         <li class="nav-menu-item"><a href="/" class="nav-menu-url active">recent</a></li>
