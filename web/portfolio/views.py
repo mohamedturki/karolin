@@ -1,18 +1,19 @@
 import logging
 
-from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import get_object_or_404, render
-from django.core.urlresolvers import reverse
+from django.views.generic import ListView
 
 from .models import Project, ProjectCategory
 
 logger = logging.getLogger(__name__)
 
 
-def index(request):
-    categories = ProjectCategory.objects.all()
-    projects = Project.objects.filter()[:3]
-    return render(request, 'portfolio/layouts/index.html', {
-        'categories': categories,
-        'projects': projects
-    })
+class ProjectList(ListView):
+    model = Project
+    template_name = 'portfolio/layouts/index.html'
+    context_object_name = 'projects'
+
+
+class RecentProjectList(ProjectList):
+
+    def get_queryset(self, **kwargs):
+        return Project.objects.order_by('pub_date')[:4]
