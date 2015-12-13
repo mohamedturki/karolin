@@ -1,5 +1,6 @@
 import datetime
 from django.db import models
+from django_markdown.models import MarkdownField
 
 
 class ProjectCategory(models.Model):
@@ -16,7 +17,7 @@ class Project(models.Model):
     title = models.CharField(max_length=200)
     url = models.URLField(blank=True)
     short_description = models.TextField(blank=True)
-    full_description = models.TextField(blank=True)
+    full_description = MarkdownField()
     category = models.ForeignKey(ProjectCategory, null=True)
 
     def __str__(self):

@@ -40,6 +40,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'django_markdown',
 ) + PROJECT_APPS
 
 
@@ -143,3 +145,6 @@ LOGGING = {
         },
     },
 }
+
+MARKDOWN_EDITOR_SKIN = 'simple'
+MARKDOWN_EXTENSIONS = ['extra']

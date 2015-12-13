@@ -18,5 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^', include('portfolio.urls', namespace="portfolio")),
+    url(r'^markdown', include('django_markdown.urls')),
     url(r'^dashboard/', include(admin.site.urls)),
 ]
