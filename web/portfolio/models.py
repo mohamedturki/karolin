@@ -1,5 +1,6 @@
 import datetime
 from django.db import models
+from django.template.defaultfilters import slugify
 from django_markdown.models import MarkdownField
 
 
@@ -17,9 +18,14 @@ class Project(models.Model):
     title = models.CharField(max_length=200)
     url = models.URLField(blank=True)
     pub_date = models.DateField(auto_now_add=True, null=True)
+    slug = models.SlugField(max_length=50, unique=True, null=True)
     short_description = models.TextField(blank=True)
     full_description = MarkdownField()
     category = models.ForeignKey(ProjectCategory, null=True)
 
     def __str__(self):
         return self.title
+
+    def save(self):
+        self.slug = slugify(self.title)
+        super(Project, self).save()

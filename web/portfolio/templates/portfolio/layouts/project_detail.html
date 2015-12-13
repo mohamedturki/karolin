@@ -12,5 +12,16 @@
         <div class="project-detail-markdown">
             {{ project.full_description|markdown }}
         </div>
+
+        <div class="project-seemore">
+            <span>See more in: <a href="">{{ project.category }}</a></span>
+            {% if similar_projects %}
+                {% for project in similar_projects %}
+                    {% include "portfolio/partials/project_list_item.html" %}
+                {% endfor %}
+            {% endif %}
+        </div>
     </div>
+
+
 {% endblock %}

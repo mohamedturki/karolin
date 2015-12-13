@@ -20,3 +20,11 @@ class RecentProjectList(ProjectList):
 class ProjectDetail(DetailView):
     model = Project
     template_name = 'portfolio/layouts/project_detail.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(ProjectDetail, self).get_context_data(**kwargs)
+        context['similar_projects'] = Project.objects.filter(
+            category=self.object.category
+        ).exclude(slug=self.object.slug)[:3]
+
+        return context
