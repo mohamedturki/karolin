@@ -1,6 +1,10 @@
 {% extends "portfolio/base.html" %}
 {% load django_markdown %}
 
+{% block subnav %}
+    {% include "portfolio/partials/sub_nav.html" with active_category=project.category.id categories=categories %}
+{% endblock %}
+
 {% block content %}
     <div class="project-detail-container">
         <h3 class="project-title">{{ project.title }}</h3>

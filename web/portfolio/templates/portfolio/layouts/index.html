@@ -1,5 +1,10 @@
 {% extends "portfolio/base.html" %}
 
+{% block subnav %}
+    {% include "portfolio/partials/sub_nav.html" with categories=categories %}
+{% endblock %}
+
+
 {% block content %}
     <div class="projects-list">
         {% for project in projects %}
