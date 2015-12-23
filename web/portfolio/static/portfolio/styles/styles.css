@@ -137,7 +137,9 @@ body {
     text-transform: uppercase;
     color: #aeaeae;
 }
-.project-detail-markdown h4 {}
+.project-detail-markdown h4 {
+    text-transform: uppercase;
+}
 .project-detail-markdown h5 {}
 .project-detail-markdown h6 {}
 
