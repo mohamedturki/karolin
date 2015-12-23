@@ -19,19 +19,19 @@ urlpatterns = [
         AboutBaseView.as_view(template_name='portfolio/layouts/about.html'),
         name='about'
         ),
-    url(r'^resume/$',
+    url(r'^about/resume/$',
         AboutBaseView.as_view(template_name='portfolio/layouts/resume.html'),
         name='resume'
         ),
-    url(r'^contact/$',
+    url(r'^about/contact/$',
         AboutBaseView.as_view(template_name='portfolio/layouts/contact.html'),
         name='contact'
         ),
-    url(r'^recommendation/$',
+    url(r'^about/testimonial/$',
         AboutBaseView.as_view(
-            template_name='portfolio/layouts/recommendation.html'
+            template_name='portfolio/layouts/testimonial.html'
         ),
-        name='recommendation'
+        name='testimonial'
         ),
 
 ]
