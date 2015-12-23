@@ -8,20 +8,24 @@
 {% block content %}
     <div class="project-detail-container">
         <h3 class="project-title">{{ project.title }}</h3>
-        <ul>
-            <li>Role: </li>
-            <li>Task: </li>
+        <ul class="project-role-list">
+            <li class="project-role">Role: </li>
+            <li class="project-role">Task: </li>
         </ul>
 
-        <div class="project-detail-markdown">
+        <div class="project-detail-markdown project-desc">
             {{ project.full_description|markdown }}
         </div>
 
-        <div class="project-seemore">
-            <span>See more in: <a href="{{ project.category.get_absolute_url }}">{{ project.category }}</a></span>
+        <div class="project-seemore text-center">
+            <span class="seemore-text">See more in: <a class="seemore-link" href="{{ project.category.get_absolute_url }}">{{ project.category }}</a></span>
             {% if similar_projects %}
                 {% for project in similar_projects %}
-                    {% include "portfolio/partials/project_list_item.html" %}
+                    <div class="project">
+                        <a class="project-image" href="{{ project.get_absolute_url }}">
+                            <img src="http://placehold.it/135x130" alt="{{ project.title }}" />
+                        </a>
+                    </div>
                 {% endfor %}
             {% endif %}
         </div>

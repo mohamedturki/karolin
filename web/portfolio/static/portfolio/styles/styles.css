@@ -121,6 +121,40 @@ body {
     padding: 40px 20px;
 }
 
+.project-desc {
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.project-role-list {
+    padding: 0;
+    list-style-type: none;
+    font-size: 17px;
+    font-weight: 200;
+}
+
+.project-seemore {
+    padding: 40px 0;
+}
+
+.project-seemore .project {
+    padding-top: 20px;
+}
+
+.project-seemore .project-image {
+    width: 135px;
+    height: 130px;
+}
+
+.seemore-text {
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.seemore-link {
+    text-decoration: none;
+    color: #1088cd;
+}
+
 /**
  * Overrides the markdown styles.
  */
