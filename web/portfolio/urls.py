@@ -1,5 +1,4 @@
 from django.conf.urls import url
-from django.views.generic import TemplateView
 
 from .views import (RecentProjectList,
                     CategoryDetail, project_detail, AboutBaseView)
@@ -21,15 +20,15 @@ urlpatterns = [
         name='about'
         ),
     url(r'^resume/$',
-        TemplateView.as_view(template_name='portfolio/layouts/resume.html'),
+        AboutBaseView.as_view(template_name='portfolio/layouts/resume.html'),
         name='resume'
         ),
     url(r'^contact/$',
-        TemplateView.as_view(template_name='portfolio/layouts/contact.html'),
+        AboutBaseView.as_view(template_name='portfolio/layouts/contact.html'),
         name='contact'
         ),
     url(r'^recommendation/$',
-        TemplateView.as_view(
+        AboutBaseView.as_view(
             template_name='portfolio/layouts/recommendation.html'
         ),
         name='recommendation'
