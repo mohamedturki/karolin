@@ -1,14 +1,15 @@
 from django.conf.urls import url
 from django.views.generic import TemplateView
 
-from .views import RecentProjectList, CategoryDetail, project_detail
+from .views import (RecentProjectList,
+                    CategoryDetail, project_detail, AboutBaseView)
 
 urlpatterns = [
     url(r'^$', RecentProjectList.as_view(), name="recent"),
     url(r'^project/(?P<slug>[-\w]+)/$',
         CategoryDetail.as_view(
-            template_name='portfolio/layouts/category_detail.html'
-        ),
+                template_name='portfolio/layouts/category_detail.html'
+            ),
         name="category-detail"
         ),
     url(r'^project/(?P<category_slug>[-\w]+)/(?P<project_slug>\w+)/$',
@@ -16,7 +17,7 @@ urlpatterns = [
         name='project-detail'
         ),
     url(r'^about/$',
-        TemplateView.as_view(template_name='portfolio/layouts/about.html'),
+        AboutBaseView.as_view(template_name='portfolio/layouts/about.html'),
         name='about'
         ),
     url(r'^resume/$',

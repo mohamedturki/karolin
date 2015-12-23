@@ -1,6 +1,6 @@
 import logging
 
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, TemplateView
 from django.shortcuts import get_object_or_404, render_to_response
 
 from .models import Project, ProjectCategory
@@ -63,3 +63,29 @@ def project_detail(request, category_slug, project_slug):
             'categories': categories
         }
     )
+
+
+class AboutBaseView(TemplateView):
+
+    def get_context_data(self, **kwargs):
+        context = super(AboutBaseView, self).get_context_data(**kwargs)
+        context['categories'] = [
+            {
+                'id': 'about',
+                'name': 'About me'
+            },
+            {
+                'id': 'resume',
+                'name': 'Resumé'
+            },
+            {
+                'id': 'testimonial',
+                'name': 'Testimonial'
+            },
+            {
+                'id': 'contact',
+                'name': 'Contact me'
+            },
+        ]
+
+        return context

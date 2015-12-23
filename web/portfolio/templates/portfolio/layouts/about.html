@@ -1,4 +1,9 @@
 {% extends "portfolio/base.html" %}
+{% load django_markdown %}
+
+{% block subnav %}
+    {% include "portfolio/partials/sub_nav.html" with active_category="about" categories=categories %}
+{% endblock %}
 
 {% block content %}
     Hi i'm Karolina
