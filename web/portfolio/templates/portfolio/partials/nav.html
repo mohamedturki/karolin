@@ -1,5 +1,7 @@
 <nav>
-    <a href="/" class="logo"></a>
+    <a href="/" class="logo">
+        {% include "portfolio/partials/logo.html" %}
+    </a>
     {% with request.resolver_match.url_name as url_name %}
     <ul class="nav-menu nav-menu-primary">
         <li class="nav-menu-item"><a href="{% url "portfolio:recent" %}" class="nav-menu-url {% if url_name != 'about' %}active{% endif %}">Works</a></li>
