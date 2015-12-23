@@ -182,7 +182,9 @@ body {
 /**
  * Buttons
  */
-
+.button-wrapper {
+    margin: 30px auto;
+}
 .button {
     padding: 5px 10px;
     text-decoration: none;
@@ -194,5 +196,13 @@ body {
 
 .button-alert {
     color: red;
-    border-bottom-color: red;
+}
+
+.button-success {
+    color: blue;
+}
+
+.project-detail-markdown h4.job-title {
+    margin-top: 0;
+    margin-bottom: 5px;
 }

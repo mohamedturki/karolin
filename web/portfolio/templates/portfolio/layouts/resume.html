@@ -2,25 +2,57 @@
 {% load django_markdown %}
 
 {% block subnav %}
-    {% include "portfolio/partials/sub_nav.html" with active_category="resumé" categories=categories %}
+    {% include "portfolio/partials/sub_nav.html" with active_category="resume" categories=categories %}
 {% endblock %}
 
 {% block content %}
     <div class="project-detail-container project-detail-markdown">
-        <h3>Feel free to contact me:</h3>
-        <span>e-mail:</span>
-        <p>
-            <a class="profile-link" href="mailto:k.dziorek@gmail.com">k.dziorek {at} gmail.com</a>
-        </p>
-        <span>or Skype:</span>
-        <p>
-            <a class="profile-link">hibernalwarmth</a>
-        </p>
+        <div class="resume-section">
+            <h3>Working experience</h3>
+            <div class="job">
+                <h4 class="job-title">UI/UX Designer/Visual designer @ upwork.com/oDesk.com</h4>
+                <span>2012 - present</span>
+                <p>
+                    UI/UX Design, Web design, Landing Page Design, iOS applications, banners,
+                    illustrations, logo design, web applications, icons, graphical overlay for the content,
+                    presentations.
+                </p>
+            </div>
 
-        <span>find me on:</span>
-        <p>
-            <a class="profile-link" href="#">Behance</a> • <a class="profile-link" href="#">LinkedIn</a> • <a class="profile-link" href="#">Instagram</a>
-        </p>
+            <div class="job">
+                <h4 class="job-title">visual design intern @ 'Txtr</h4>
+                <span>1.1.2014 - 30.6.2014</span>
+                <p>
+                    I was part of a UX & Applications team. My tasks included: 'txtr apps:
+                    interface design for Android, iOS, Windows 8 and Mac OS X; txtr Web: re-search, design
+                    and concept for txtr.com's app page; illustrations, pixel perfect asset production and design
+                    guidelines for all platforms, rebrand design of apps for external clients, flat redisgn of the desktop app
+                    ans my personal project, creative brainstorming.
+                </p>
+            </div>
+        </div>
+
+        <div class="resume-section">
+            <h3>Software</h3>
+        </div>
+        <div class="resume-section">
+            <h3>Education</h3>
+        </div>
+        <div class="resume-section">
+            <h3>Languages</h3>
+        </div>
+        <div class="resume-section">
+            <h3>Other working experience</h3>
+        </div>
+
+
+        <div class="button-wrapper text-center">
+            <a class="button button-alert" href="#">Download CV</a>
+        </div>
+
+        <div class="button-wrapper text-center">
+            <a class="button button-success" href="#">see recommendations</a>
+        </div>
 
     </div>
 {% endblock %}
