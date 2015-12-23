@@ -1,6 +1,6 @@
 <div class="project">
     <h3 class="project-title">{{ project.title }}</h3>
-    <a class="project-image" href="{% url "portfolio:project-detail" project.slug %}">
+    <a class="project-image" href="{{ project.get_absolute_url }}">
         <img src="http://placehold.it/230x212" alt="{{ project.title }}" />
     </a>
 </div>

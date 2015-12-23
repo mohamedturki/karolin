@@ -1,12 +1,18 @@
 from django.conf.urls import url
 from django.views.generic import TemplateView
 
-from .views import RecentProjectList, ProjectDetail
+from .views import RecentProjectList, CategoryDetail, project_detail
 
 urlpatterns = [
     url(r'^$', RecentProjectList.as_view(), name="recent"),
-    url(r'^project/(?P<slug>\w+)/$',
-        ProjectDetail.as_view(),
+    url(r'^project/(?P<slug>[-\w]+)/$',
+        CategoryDetail.as_view(
+            template_name='portfolio/layouts/category_detail.html'
+        ),
+        name="category-detail"
+        ),
+    url(r'^project/(?P<category_slug>[-\w]+)/(?P<project_slug>\w+)/$',
+        project_detail,
         name='project-detail'
         ),
     url(r'^about/$',

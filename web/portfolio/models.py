@@ -6,12 +6,20 @@ from django_markdown.models import MarkdownField
 
 class ProjectCategory(models.Model):
     name = models.CharField(blank=False, max_length=100)
+    slug = models.SlugField(max_length=50, unique=True, null=True)
 
     class Meta:
         verbose_name_plural = 'Project categories'
 
     def __str__(self):
         return self.name
+
+    def save(self):
+        self.slug = slugify(self.name)
+        super(ProjectCategory, self).save()
+
+    def get_absolute_url(self):
+        return "/project/%s/" % self.slug
 
 
 class Project(models.Model):
@@ -29,3 +37,6 @@ class Project(models.Model):
     def save(self):
         self.slug = slugify(self.title)
         super(Project, self).save()
+
+    def get_absolute_url(self):
+        return "/project/%s/%s" % (self.category.slug, self.slug)

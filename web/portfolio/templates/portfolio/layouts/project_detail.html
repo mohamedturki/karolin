@@ -18,7 +18,7 @@
         </div>
 
         <div class="project-seemore">
-            <span>See more in: <a href="">{{ project.category }}</a></span>
+            <span>See more in: <a href="{{ project.category.get_absolute_url }}">{{ project.category }}</a></span>
             {% if similar_projects %}
                 {% for project in similar_projects %}
                     {% include "portfolio/partials/project_list_item.html" %}

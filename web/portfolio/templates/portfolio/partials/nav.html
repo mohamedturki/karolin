@@ -2,7 +2,7 @@
     <a href="/" class="logo"></a>
     {% with request.resolver_match.url_name as url_name %}
     <ul class="nav-menu nav-menu-primary">
-        <li class="nav-menu-item"><a href="{% url "portfolio:recent" %}" class="nav-menu-url {% if url_name == 'recent' or url_name == 'project-detail' %}active{% endif %}">Works</a></li>
+        <li class="nav-menu-item"><a href="{% url "portfolio:recent" %}" class="nav-menu-url {% if url_name != 'about' %}active{% endif %}">Works</a></li>
         <li class="nav-menu-item"><a href="{% url "portfolio:about" %}" class="nav-menu-url {% if url_name == 'about' %}active{% endif %}">About me</a></li>
     </ul>
     {% endwith %}

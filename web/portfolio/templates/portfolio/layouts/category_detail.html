@@ -1,0 +1,13 @@
+{% extends "portfolio/base.html" %}
+
+{% block subnav %}
+    {% include "portfolio/partials/sub_nav.html" with active_category=category.id categories=categories %}
+{% endblock %}
+
+{% block content %}
+    <div class="projects-list">
+        {% for project in projects %}
+            {% include "portfolio/partials/project_list_item.html" %}
+        {% endfor %}
+    </div>
+{% endblock %}

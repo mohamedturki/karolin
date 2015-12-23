@@ -1,6 +1,7 @@
 import logging
 
 from django.views.generic import ListView, DetailView
+from django.shortcuts import get_object_or_404, render_to_response
 
 from .models import Project, ProjectCategory
 
@@ -29,16 +30,36 @@ class RecentProjectList(ProjectList):
         return context
 
 
-class ProjectDetail(DetailView):
-    model = Project
-    template_name = 'portfolio/layouts/project_detail.html'
+class CategoryDetail(DetailView):
+    model = ProjectCategory
+    context_object_name = 'category'
 
     def get_context_data(self, **kwargs):
-        context = super(ProjectDetail, self).get_context_data(**kwargs)
-        context['similar_projects'] = Project.objects.filter(
-            category=self.object.category
-        ).exclude(slug=self.object.slug)[:3]
-
+        context = super(CategoryDetail, self).get_context_data(**kwargs)
+        context['projects'] = Project.objects.filter(category=self.object)
         context['categories'] = ProjectCategory.objects.all()
 
         return context
+
+
+def project_detail(request, category_slug, project_slug):
+    category = get_object_or_404(ProjectCategory, slug__iexact=category_slug)
+    project = get_object_or_404(
+        Project,
+        slug__iexact=project_slug,
+        category=category
+    )
+    similar_projects = Project.objects.filter(
+        category=category
+    ).exclude(slug=project_slug)[:3]
+    categories = ProjectCategory.objects.all()
+
+    return render_to_response(
+        'portfolio/layouts/project_detail.html',
+        {
+            'category': category,
+            'project': project,
+            'similar_projects': similar_projects,
+            'categories': categories
+        }
+    )
