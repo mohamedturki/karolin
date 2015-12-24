@@ -1,0 +1,17 @@
+<ul class="nav-menu nav-menu-secondary js-submenu">
+    {% with request.resolver_match.url_name as url_name %}
+        <li class="nav-menu-item {% if url_name == 'about' %}active{% endif %}">
+            <a href="{% url 'portfolio:about' %}" class="nav-menu-url {% if url_name == 'about' %}active{% endif %}">About me</a>
+        </li>
+        <li class="nav-menu-item {% if url_name == 'resume' %}active{% endif %}">
+            <a href="{% url 'portfolio:resume' %}" class="nav-menu-url {% if url_name == 'resume' %}active{% endif %}">Resume</a>
+        </li>
+        <li class="nav-menu-item {% if url_name == 'testimonial' %}active{% endif %}">
+            <a href="{% url 'portfolio:testimonial' %}" class="nav-menu-url {% if url_name == 'testimonial' %}active{% endif %}">Testimonial</a>
+        </li>
+        <li class="nav-menu-item {% if url_name == 'contact' %}active{% endif %}">
+            <a href="{% url 'portfolio:contact' %}" class="nav-menu-url {% if url_name == 'contact' %}active{% endif %}">Contact me</a>
+        </li>
+
+    {% endwith %}
+</ul>

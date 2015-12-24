@@ -3,9 +3,12 @@
 var submenu = document.getElementsByClassName('js-submenu')[0];
 
 function activeMenuHandler(event) {
-    event.stopPropagation();
-    event.preventDefault();
-    submenu.classList.toggle('open');
+    if (event.target.classList.contains('active')) {
+        console.log(event);
+        event.stopPropagation();
+        event.preventDefault();
+        submenu.classList.toggle('open');
+    }
 }
 
 
