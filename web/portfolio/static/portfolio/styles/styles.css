@@ -168,36 +168,50 @@ body {
  * Overrides the markdown styles.
  */
 
+.project-detail-markdown {
+    padding-top: 10px;
+}
+
 .project-detail-markdown h1 {}
 .project-detail-markdown h2 {}
 .project-detail-markdown h3 {
     margin: 0;
     padding-top: 30px;
-    padding-bottom: 35px;
+    padding-bottom: 30px;
     font-family: "Montserrat";
     font-weight: 700;
     font-size: 15px;
     text-transform: uppercase;
     color: #aeaeae;
+    letter-spacing: 0.05em;
 }
 .project-detail-markdown h4 {
+    font-family: "Montserrat";
     text-transform: uppercase;
 }
 .project-detail-markdown h5 {}
 .project-detail-markdown h6 {}
 
 .project-detail-markdown span {
+    display: block;
     font-size: 13px;
     color: #626161;
     letter-spacing: 2px;
+    line-height: 1.5em;
 }
 
 
 .project-detail-markdown p {
     margin: 30px auto;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 300;
+    line-height: 1.5em;
     color: #4c4c4c;
+}
+
+.project-detail-markdown.contact p {
+    margin-top: 11px;
+    margin-bottom: 40px
 }
 
 .project-detail-markdown img {
@@ -207,7 +221,7 @@ body {
 .project-detail-markdown a {}
 
 .profile-link {
-    font-weight: 400;
+    font-weight: 600;
     text-decoration: none;
     color: #000;
 }
@@ -232,26 +246,68 @@ body {
 
 
 .button-wrapper {
-    margin: 30px auto;
+    width: 100%;
+    margin: 20px auto;
 }
 .button {
-    padding: 5px 10px;
+    display: block;
+    max-width: 100%;
+    padding: 15px 20px;
     text-decoration: none;
     text-transform: uppercase;
+    font-family: "Montserrat";
     font-size: 13px;
     font-weight: 700;
-    border-bottom: 3px solid;
+    letter-spacing: 0.05em;
+    border: 2px solid;
 }
 
 .button-alert {
-    color: red;
+    color: #f75d8c;
+}
+.button-alert:active {
+    background-color: #f75d8c;
+    color: #fff;
 }
 
 .button-success {
-    color: blue;
+    color: #2085d2;
 }
+.button-success:active {
+    background-color: #2085d2;
+    color: #fff;
+}
+
 
 .project-detail-markdown h4.job-title {
     margin-top: 0;
     margin-bottom: 5px;
+    color: #282828;
+}
+
+.resume-section.open {
+    padding-top: 30px;
+}
+
+.resume-section h3 {
+    padding-top: 0;
+    padding-bottom: 35px;
+}
+
+.job p {
+    margin-top: 18px;
+    margin-bottom: 40px;
+}
+
+
+/**
+ * Testimonial quotes
+ */
+
+.testimonial {
+    padding-top: 30px;
+}
+
+.testimonial:first-of-type {
+    padding-top: 40px;
 }
