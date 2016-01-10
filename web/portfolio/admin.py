@@ -3,11 +3,14 @@ from django_markdown.admin import MarkdownModelAdmin
 
 from .models import ProjectCategory, Project
 
-
+@admin.register(ProjectCategory)
 class ProjectCategoryAdmin(admin.ModelAdmin):
-    prepopoulated_fields = {
-        "slug": ("title",)
+    prepopulated_fields = {
+        "slug": ("name",)
     }
 
-admin.site.register(ProjectCategory, ProjectCategoryAdmin)
-admin.site.register(Project, MarkdownModelAdmin)
+@admin.register(Project)
+class ProjectAdmin(admin.ModelAdmin):
+    prepopulated_fields = {
+        "slug": ("title",)
+    }
