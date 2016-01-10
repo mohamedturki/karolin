@@ -1,9 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 body {
     padding: 0;
     margin: 0;
-    font-family: 'Helvetica Neue';
+    font-family: 'Open Sans';
     box-sizing: content-box;
 }
 
@@ -48,8 +49,8 @@ body {
     width: 100%;
     margin-bottom: 20px;
     padding: 0;
-    font-size: 14px;
-    background-color: #fafafa;
+    font-size: 13px;
+    background-color: #f7f7f7;
     opacity: 0.97;
 }
 
@@ -69,13 +70,21 @@ body {
     display: block;
     padding-top: 30px;
     padding-bottom: 30px;
+    text-transform: lowercase;
 }
 
 .nav-menu-url {
-    color: #727272;
+    color: #b0b0b0;
     text-decoration: none;
+    letter-spacing: 0.1em;
 }
 
+.nav-menu-secondary .nav-menu-item .nav-menu-url {
+    color: #8c8c8c;
+    letter-spacing: 0.17em;
+}
+
+.nav-menu-secondary .nav-menu-item .nav-menu-url.active,
 .nav-menu-url.active {
     color: #1088cd;
 }
@@ -191,7 +200,9 @@ body {
     color: #4c4c4c;
 }
 
-.project-detail-markdown img {}
+.project-detail-markdown img {
+    max-width: 100%;
+}
 
 .project-detail-markdown a {}
 
@@ -218,6 +229,8 @@ body {
 /**
  * Buttons
  */
+
+
 .button-wrapper {
     margin: 30px auto;
 }
