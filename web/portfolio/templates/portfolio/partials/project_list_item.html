@@ -1,6 +1,6 @@
 <div class="project">
     <h3 class="project-title">{{ project.title }}</h3>
-    <a class="project-image" href="{{ project.get_absolute_url }}">
-        <img src="{{ MEDIA_URL }}{{ project.thumbnail.url }}" alt="{{ project.title }}" />
+    <a  href="{{ project.get_absolute_url }}">
+        <img class="project-image" src="{{ project.thumbnail.url }}" alt="{{ project.title }}" />
     </a>
 </div>
