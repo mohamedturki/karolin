@@ -32,6 +32,7 @@ web:
     volumes:
         # Mount the static dirs as a volume for nginx to pick up.
         - /var/www/karol.in/static/
+        - /var/www/karol.in/media/
     links:
         - db:db
     env_file:
