@@ -7,6 +7,10 @@ server {
         alias /var/www/karol.in/static;
     }
 
+    location /media {
+        alias /var/www/karol.in/media;
+    }
+
     location / {
         proxy_pass http://web:8000;
         proxy_set_header Host $host;

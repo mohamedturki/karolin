@@ -4,3 +4,4 @@ django-markdown
 gunicorn
 django-compressor
 django-debug-toolbar
+pillow

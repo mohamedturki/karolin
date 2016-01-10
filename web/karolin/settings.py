@@ -121,6 +121,8 @@ STATICFILES_DIRS = (
 # Serve static assets with Nginx from this location.
 STATIC_ROOT = '/var/www/karol.in/static/'
 
+MEDIA_ROOT = '/var/www/karol.in/media'
+MEDIA_URL = '/media/'
 
 LOGGING = {
     'version': 1,
