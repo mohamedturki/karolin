@@ -29,6 +29,15 @@ body {
     border-bottom: 1px solid #e6e6e6;
 }
 
+@media screen and (min-width: 1024px) {
+    .logo {
+        display: inline-block;
+        width: 25%;
+        border-bottom-width: 0;
+        vertical-align: middle;
+    }
+}
+
 .nav-menu {
     padding: 30px 0;
     margin: 0;
@@ -38,6 +47,22 @@ body {
     border-bottom: 1px solid #e6e6e6;
     white-space: nowrap;
 }
+
+@media screen and (min-width: 720px) {
+    .nav-menu:not(.nav-menu-secondary) {
+        border-bottom-width: 0;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .nav-menu {
+        display: inline-block;
+        width: 70%;
+        vertical-align: middle;
+        border-bottom-width: 0;
+    }
+}
+
 
 .nav-menu-primary {
     font-size: 15px;
@@ -54,6 +79,13 @@ body {
     opacity: 0.97;
 }
 
+@media screen and (min-width: 720px) {
+    .nav-menu-secondary {
+        position: relative;
+        background-color: transparent;
+    }
+}
+
 .nav-menu-item {
     display: inline-block;
 }
@@ -64,6 +96,20 @@ body {
 
 .nav-menu-secondary:not(.open) .nav-menu-item:not(.active) {
     display: none;
+}
+
+/*
+ * Show all items of the sub menu.
+ */
+@media screen and (min-width: 720px) {
+    .nav-menu-secondary:not(.open) .nav-menu-item.active,
+    .nav-menu-secondary:not(.open) .nav-menu-item:not(.active) {
+        display: inline-block;
+    }
+
+    .nav-menu-item:not(:first-of-type) {
+        padding-left: 50px;
+    }
 }
 
 .nav-menu-secondary .nav-menu-item {
@@ -84,9 +130,23 @@ body {
     letter-spacing: 0.17em;
 }
 
+@media screen and (min-width: 720px) {
+    .nav-menu .nav-menu-item .nav-menu-url:not(.active),
+    .nav-menu-secondary .nav-menu-item .nav-menu-url {
+        color: #aeb6bc;
+    }
+}
+
 .nav-menu-secondary .nav-menu-item .nav-menu-url.active,
 .nav-menu-url.active {
     color: #1088cd;
+}
+
+@media screen and (min-width: 720px) {
+    .nav-menu-secondary .nav-menu-item .nav-menu-url.active,
+    .nav-menu-url.active {
+        color: #000;
+    }
 }
 
 /**
@@ -100,13 +160,24 @@ body {
     text-align: center;
 }
 
+@media screen and (min-width: 720px) {
+    .projects-list {
+        margin-top: 60px;
+    }
+}
+
 .project {
     margin-bottom: 55px;
 }
 
-.project:first-child {
-    margin-top: 40px;
+@media screen and (min-width: 720px) {
+    .project {
+        display: inline-block;
+        margin-right: 15px;
+        margin-left: 15px;
+    }
 }
+
 
 .project-title {
     margin-bottom: 15px;
@@ -115,10 +186,24 @@ body {
     text-transform: uppercase;
 }
 
+@media screen and (min-width: 720px) {
+    .project-title {
+        font-size: 13px;
+        letter-spacing: 0.05em;
+    }
+}
+
 .project-image {
     width: 230px;
     height: 212px;
     outline: 1px solid #e9e9e9;
+}
+
+@media screen and (min-width: 720px) {
+    .project-image {
+        width: 202px;
+        height: 190px;
+    }
 }
 
 /**
@@ -128,6 +213,13 @@ body {
 .project-detail-container {
     margin-top: 80px;
     padding: 40px 20px;
+}
+
+@media screen and (min-width: 720px) {
+    .project-detail-container {
+        margin-top: 50px;
+        padding-top: 0;
+    }
 }
 
 .project-desc {
@@ -185,6 +277,14 @@ body {
     color: #aeaeae;
     letter-spacing: 0.05em;
 }
+
+@media screen and (min-width: 720px) {
+    .project-detail-markdown h3 {
+        font-size: 13px;
+        padding-top: 10px;
+    }
+}
+
 .project-detail-markdown h4 {
     font-family: "Montserrat";
     text-transform: uppercase;
@@ -207,6 +307,13 @@ body {
     font-weight: 300;
     line-height: 1.5em;
     color: #4c4c4c;
+}
+
+@media screen and (min-width: 720px) {
+    .project-detail-markdown p {
+        margin-top: 15px;
+        font-size: 14px;
+    }
 }
 
 .project-detail-markdown.contact p {
@@ -236,19 +343,35 @@ body {
 
 .quote-text {
     color: #626161;
+    font-size: 15px;
     font-weight: 300;
     font-style: italic;
+}
+
+@media screen and (min-width: 720px) {
+    .quote-text {
+        font-size: 14px;
+    }
 }
 
 /**
  * Buttons
  */
 
-
 .button-wrapper {
     width: 100%;
     margin: 20px auto;
 }
+
+@media screen and (min-width: 720px) {
+    .button-wrapper {
+        display: inline-block;
+        width: 37%;
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+}
+
 .button {
     display: block;
     max-width: 100%;
@@ -260,6 +383,12 @@ body {
     font-weight: 700;
     letter-spacing: 0.05em;
     border: 2px solid;
+}
+
+@media screen and (min-width: 720px) {
+    .button {
+        font-size: 12px;
+    }
 }
 
 .button-alert {
@@ -285,8 +414,25 @@ body {
     color: #282828;
 }
 
+@media screen and (min-width: 720px) {
+    .project-detail-markdown h4.job-title {
+        font-size: 13px;
+    }
+
+    .project-detail-markdown span {
+        font-size: 12px;
+        letter-spacing: 0.19em;
+    }
+}
+
 .resume-section.open {
     padding-top: 30px;
+}
+
+@media screen and (min-width: 720px) {
+    .resume-section.open {
+        padding-top: 0;
+    }
 }
 
 .resume-section h3 {
@@ -297,6 +443,15 @@ body {
 .job p {
     margin-top: 18px;
     margin-bottom: 40px;
+}
+
+@media screen and (min-width: 720px) {
+    .skill {
+        display: inline-block;
+    }
+    .skill:not(:first-of-type) {
+        margin-left: 45px;
+    }
 }
 
 
@@ -310,4 +465,32 @@ body {
 
 .testimonial:first-of-type {
     padding-top: 40px;
+}
+
+@media screen and (min-width: 720px) {
+    .testimonial:first-of-type {
+        padding-top: 0;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .contact-ref span,
+    .project-detail-markdown .testimonial span {
+        font-size: 12px;
+        letter-spacing: 0.19em;
+    }
+}
+
+
+@media screen and (min-width: 720px) {
+    .contact {
+
+    }
+    .contact-ref {
+        display: inline-block;
+    }
+
+    .contact-ref:not(:first-of-type) {
+        margin-left: 70px;
+    }
 }
