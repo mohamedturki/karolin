@@ -23,7 +23,7 @@
                 {% for project in similar_projects %}
                     <div class="project">
                         <a class="project-image" href="{{ project.get_absolute_url }}">
-                            <img src="http://placehold.it/135x130" alt="{{ project.title }}" />
+                            <img src="{{ project.thumbnail.url }}" width=130 height=130 alt="{{ project.title }}" />
                         </a>
                     </div>
                 {% endfor %}
