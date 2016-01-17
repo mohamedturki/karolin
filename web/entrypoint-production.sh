@@ -1,11 +1,5 @@
 #!/bin/sh
 
-export DJANGO_SETTINGS_MODULE=karolin.settings.production
-export SECRET_KEY="openssl rand -base64 32"
-export DB_NAME="postgres"
-export DB_USER="postgres"
-
-
 # Waits for the Postgresql services to be available
 # before running Django migration.
 while ! nc -z db 5432; do sleep 3; done
