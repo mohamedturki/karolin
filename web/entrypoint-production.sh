@@ -1,5 +1,7 @@
 #!/bin/sh
 
+export DEBUG=False
+
 # Waits for the Postgresql services to be available
 # before running Django migration.
 while ! nc -z db 5432; do sleep 3; done
