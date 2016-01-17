@@ -1,4 +1,8 @@
 #!/bin/sh
+export SECRET_KEY="openssl rand -base64 32"
+export DB_NAME="postgres"
+export DB_USER="postgres"
+
 
 # Waits for the Postgresql services to be available
 # before running Django migration.
