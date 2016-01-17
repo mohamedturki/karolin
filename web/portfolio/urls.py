@@ -11,7 +11,7 @@ urlpatterns = [
             ),
         name="category-detail"
         ),
-    url(r'^project/(?P<category_slug>[-\w]+)/(?P<project_slug>\w+)/$',
+    url(r'^project/(?P<category_slug>[-\w]+)/(?P<project_slug>[-\w]+)/$',
         project_detail,
         name='project-detail'
         ),
