@@ -469,12 +469,12 @@ body {
     }
 }
 
-.resume-section.open {
+.resume-section {
     padding-top: 30px;
 }
 
 @media screen and (min-width: 720px) {
-    .resume-section.open {
+    .resume-section {
         padding-top: 0;
     }
 }
@@ -482,6 +482,11 @@ body {
 .resume-section h3 {
     padding-top: 0;
     padding-bottom: 35px;
+    cursor: pointer;
+}
+
+.resume-section.is-closed .resume-item {
+    display: none;
 }
 
 .job p {
