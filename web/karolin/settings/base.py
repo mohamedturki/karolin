@@ -115,9 +115,6 @@ STATICFILES_FINDERS = (
 )
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
-)
 
 # Serve static assets with Nginx from this location.
 STATIC_ROOT = '/var/www/karol.in/static/'

@@ -14,4 +14,8 @@ python manage.py migrate
 
 python manage.py collectstatic --noinput
 
+# Create a superuser.
+# Credits go to: http://source.mihelac.org/2009/10/23/django-avoiding-typing-password-for-superuser/
+echo "from django.contrib.auth.models import User; User.objects.create_superuser('karolina', 'k.dziorek@gmail.com', 'rootpassword')" | python manage.py shell
+
 /usr/local/bin/gunicorn -b :8000 -w 2 karolin.wsgi:application
