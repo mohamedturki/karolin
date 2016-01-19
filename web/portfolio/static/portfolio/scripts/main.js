@@ -19,6 +19,5 @@ function activeMenuHandler(event) {
 function toggleResumeSection(event) {
     event.stopPropagation();
     event.preventDefault();
-    console.log(event);
     event.target.parentNode.classList.toggle('is-closed');
 }
