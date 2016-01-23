@@ -28,6 +28,8 @@
                     </div>
                 {% endfor %}
             {% endif %}
+
+            {% include "portfolio/partials/sub_nav.html" with active_category=project.category.id categories=categories %}
         </div>
     </div>
 
