@@ -42,6 +42,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     'django_markdown',
+    'dbbackup',
 ) + PROJECT_APPS
 
 
@@ -148,3 +149,9 @@ LOGGING = {
 
 MARKDOWN_EDITOR_SKIN = 'simple'
 MARKDOWN_EXTENSIONS = ['extra']
+
+# django-dbbackup settings
+DBBACKUP_STORAGE = 'dbbackup.storage.filesystem_storage'
+DBBACKUP_STORAGE_OPTIONS = {
+    'location': os.getcwd()
+}
