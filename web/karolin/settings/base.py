@@ -153,7 +153,9 @@ MARKDOWN_EDITOR_SKIN = 'simple'
 MARKDOWN_EXTENSIONS = ['extra']
 
 # django-dbbackup settings
-DBBACKUP_STORAGE = 'dbbackup.storage.filesystem_storage'
+DBBACKUP_STORAGE = 'dbbackup.storage.s3_storage'
 DBBACKUP_STORAGE_OPTIONS = {
-    'location': os.getcwd()
+    'access_key': 'AKIAINZULEHYYVVXAMDA',
+    'secret_key': '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',
+    'bucket_name': 'karolin-dbbackup'
 }
