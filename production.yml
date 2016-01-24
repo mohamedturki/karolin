@@ -35,6 +35,4 @@ web:
         - /var/www/karol.in/media/
     links:
         - db:db
-    env_file:
-        - .env
     command: ./entrypoint-production.sh
