@@ -3,7 +3,7 @@
 var submenu = document.getElementsByClassName('js-submenu')[0],
     resumeSections = document.getElementsByClassName('js-resume-section-headline');
 
-submenu.addEventListener('click', activeMenuHandler);
+submenu.addEventListener('touchend', activeMenuHandler);
 for (var i = 0; i < resumeSections.length; i++) {
     resumeSections[i].addEventListener('click', toggleResumeSection);
 }
