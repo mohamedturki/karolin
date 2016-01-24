@@ -86,8 +86,8 @@ WSGI_APPLICATION = 'karolin.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgres',
-        'USER': 'postgres',
+        'NAME': os.environ["DB_NAME"],
+        'USER': os.environ["DB_USER"],
         'HOST': 'db',
         'PORT': 5432,
     }
@@ -155,7 +155,7 @@ MARKDOWN_EXTENSIONS = ['extra']
 # django-dbbackup settings
 DBBACKUP_STORAGE = 'dbbackup.storage.s3_storage'
 DBBACKUP_STORAGE_OPTIONS = {
-    'access_key': 'AKIAINZULEHYYVVXAMDA',
-    'secret_key': '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',
+    'access_key': os.environ["AWS_ACCESS"],
+    'secret_key': os.environ["AWS_SECRET"],
     'bucket_name': 'karolin-dbbackup'
 }
