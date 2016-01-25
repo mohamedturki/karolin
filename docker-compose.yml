@@ -15,7 +15,7 @@ db:
 
 web:
     restart: always
-    build: ./web
+    image: mturki/karolin_web
     ports:
         - "8000:8000"
     volumes:
