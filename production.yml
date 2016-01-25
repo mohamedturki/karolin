@@ -15,7 +15,7 @@ db:
 
 nginx:
     restart: always
-    image: mturki/karolin_nginx
+    image: mturki/karolin_nginx_prod
     ports:
         - "80:80"
     volumes_from:
@@ -26,7 +26,7 @@ nginx:
 
 web:
     restart: always
-    image: mturki/karolin_web
+    image: mturki/karolin_web_prod
     expose:
         - "8000"
     volumes:
