@@ -444,7 +444,10 @@ body {
     max-width: 100%;
 }
 
-.project-detail-markdown a {}
+.project-detail-markdown a {
+    color: #1088cd;
+    text-decoration: none;
+}
 
 .profile-link {
     font-weight: 600;
