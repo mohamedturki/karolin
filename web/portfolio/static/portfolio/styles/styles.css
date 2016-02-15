@@ -1,7 +1,7 @@
 body {
     padding: 0;
     margin: 0;
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', sans-serif;
     box-sizing: content-box;
 }
 
@@ -97,6 +97,10 @@ body {
     font-size: 13px;
     background-color: #f7f7f7;
     opacity: 0.97;
+}
+
+.active .close:hover {
+    text-decoration: none;
 }
 
 .project-seemore .nav-menu-secondary {
@@ -336,8 +340,13 @@ body {
 }
 
 .project-seemore .project-image {
-    width: 135px;
-    height: 130px;
+    display: inline-block;
+    width: 130px;
+    height: 129px;
+}
+
+.project-seemore .project-image:hover {
+    outline: 1px solid #e9e9e9;
 }
 
 @media screen and (min-width: 720px) {
@@ -650,5 +659,11 @@ body {
 
     .contact-ref:not(:first-of-type) {
         margin-left: 39px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .aboutme-container {
+        padding-bottom: 53px;
     }
 }
