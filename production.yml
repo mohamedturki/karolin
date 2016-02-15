@@ -15,7 +15,7 @@ db:
 
 nginx:
     restart: always
-    image: mturki/karolin_nginx_prod
+    build: ./nginx
     ports:
         - "80:80"
     volumes_from:
@@ -26,7 +26,7 @@ nginx:
 
 web:
     restart: always
-    image: mturki/karolin_web_prod
+    build: ./web
     expose:
         - "8000"
     volumes:
@@ -35,4 +35,6 @@ web:
         - /var/www/karol.in/media/
     links:
         - db:db
+    env_file:
+        - .env
     command: ./entrypoint-production.sh
