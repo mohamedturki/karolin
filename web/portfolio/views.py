@@ -21,7 +21,7 @@ class ProjectList(ListView):
 
 
 class RecentProjectList(ProjectList):
-    queryset = Project.objects.order_by('pub_date')[:4]
+    queryset = Project.objects.order_by('-pub_date')[:3]
 
     def get_context_data(self, **kwargs):
         context = super(RecentProjectList, self).get_context_data(**kwargs)
