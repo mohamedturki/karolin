@@ -8,11 +8,6 @@
 {% block content %}
     <div class="project-detail-container">
         <h3 class="project-title">{{ project.title }}</h3>
-        <ul class="project-role-list">
-            <li class="project-role">Role: {{ project.role }}</li>
-            <li class="project-role">Task: {{ project.task }}</li>
-        </ul>
-
         <div class="project-detail-markdown project-desc">
             {{ project.full_description|markdown }}
         </div>
