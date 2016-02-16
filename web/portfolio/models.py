@@ -28,7 +28,7 @@ class Project(models.Model):
     pub_date = models.DateTimeField(null=True)
     slug = models.SlugField(max_length=50, unique=True, null=True)
     thumbnail = models.ImageField(upload_to="thumbnails/", null=True)
-    role = models.CharField(max_length=200, null=True)
+    role = models.CharField(max_length=240, null=True)
     task = models.CharField(max_length=200, null=True)
     short_description = models.TextField(blank=True)
     full_description = MarkdownField()
