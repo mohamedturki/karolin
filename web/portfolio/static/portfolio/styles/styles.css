@@ -233,7 +233,7 @@ body {
     .projects-list {
          width: 73%;
      }
-         
+
     .project-seemore {
         padding-top: 50px;
 
@@ -452,6 +452,10 @@ body {
     text-decoration: none;
 }
 
+.project-detail-markdown a:hover {
+    color: #0f4d99;
+    text-decoration: underline;  
+}
 .profile-link {
     font-weight: 600;
     text-decoration: none;
