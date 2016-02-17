@@ -1,6 +1,6 @@
 # karol.in
 
-[Karolina](https://karol.in)'s personal website/portfolio.
+[Karolina](http://karolina.design)'s personal website/portfolio.
 
 # Quick start
 
