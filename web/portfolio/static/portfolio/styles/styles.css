@@ -230,7 +230,10 @@ body {
         margin-right: auto;
         margin-left: auto;
     }
-
+    .projects-list {
+         width: 73%;
+     }
+         
     .project-seemore {
         padding-top: 50px;
 
