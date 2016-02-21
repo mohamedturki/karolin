@@ -411,7 +411,11 @@ body {
     font-family: "Montserrat";
     text-transform: uppercase;
 }
-.project-detail-markdown h5 {}
+.project-detail-markdown h5 {
+    font-family: "Montserrat";
+    text-transform: uppercase;
+    font-size: 13px;
+}
 .project-detail-markdown h6 {}
 
 .project-detail-markdown span {
