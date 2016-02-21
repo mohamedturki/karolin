@@ -575,6 +575,7 @@ body {
     margin-top: 0;
     margin-bottom: 5px;
     color: #282828;
+    font-size: 15px;
 }
 
 @media screen and (min-width: 720px) {
