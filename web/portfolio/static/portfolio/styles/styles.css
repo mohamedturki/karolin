@@ -471,6 +471,11 @@ body {
     color: #116bb0;
 }
 
+.profile-link.skype:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
 
 .quote-author {
     display: block;
